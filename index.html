@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css" /> 
+    <style>
+      #BotonCopiar{
+        display: none;
+      }
+    </style>
+</head>
+<body>
+    <div class="containerTexto">
+        <div class="containerEncriptador">
+            <textarea
+          name="TxtPrincipal" 
+          class="TxtPrincipal"
+          id="TxtPrincipal"
+          cols="30"
+          rows="10"
+          placeholder="Ingresa el texto aquí"
+        ></textarea>
+        </div>
+        <div class="ReglasDeEncriptado">
+            <p>Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="Boton">
+            <button id="BotonEncriptar" type="button" onclick="encriptar()">
+                Encriptar
+              </button>
+              <div id = "BotonCopiar">
+                <button class="btn" id="BotonEncriptado">Copiar</button>
+              </div>
+              
+
+              <input
+            type="button" id="BotonDesencriptar" value="Desencriptar" onclick="desencriptar()"
+          />
+          <div id = "BotonCopiar">
+            <button class="btn" id="BotonEncriptado" onclick="BotonCopiar('p#TxtPrincipal')">Copiar</button>
+          </div>
+          
+      
+        </div>
+        <div class="encriptado">
+            <img src="img/muñeco.png" alt="" id="muñeco">
+            <div class="MensajeInicial" id="MensajeInicial">
+                <h2 id="TextoInicial">Ningún mensaje fue encontrado</h2>
+                <p id="Indicacion">Ingresa el texto que desees encriptar o desencriptar.</p>
+                
+            </div>
+            
+        </div>
+    
+    </div>
+    
+</body>
+<script src="app.js"></script>
+</html>
+

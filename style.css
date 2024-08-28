@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.containerTexto{
+    position:relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(217, 213, 202, 0.904);
+}
+
+.containerTexto::before {
+  background-image: url("img/pngegg.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.TxtPrincipal{
+    position:absolute;
+    width: 40%;
+    height: 48%;
+    left: 12%;
+    top: 10%;
+    border:none;
+    font-family: System-ui;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 140%;
+    background-color:  rgba(217, 213, 202, 0.904);
+}
+
+.TxtPrincipal::placeholder{
+    color: #463e35;
+    
+}
+
+.TxtPrincipal:focus,
+.TxtPrincipal:active {
+  border: none;
+  outline: none;
+}
+.ReglasDeEncriptado{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  padding: 0px;
+  gap: 8px;
+  position: absolute;
+  width: 80%;
+  left: 12%;
+  top: 80%;
+
+}
+.ReglasDeEncriptado p{
+  font-family: System-ui;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgb(35, 34, 34);
+  opacity: 0.8;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+}
+
+.Boton{
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1% 0;
+  position: absolute;
+  width: 80%;
+  left: 12%;
+  top: 82%;
+
+}
+
+.Boton > button{
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  gap: 8px;
+  width: 25%;
+  background-color: #84786d;
+  border: 1px solid #e2dfdb;
+  border-radius: 24px;
+  font-family: "System-ui";
+  font-size: 22px;
+  line-height: 19px;
+  text-align: center;
+  color: #fff;
+}
+
+.Boton > input{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2%;
+  gap: 8px;
+  width: 25%;
+  background:  #e2dfdb;
+  border: 1px solid  #84786d;
+  border-radius: 24px;
+  font-family: System-ui;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 19px;
+  text-align: center;
+  color: #84786d;
+}
+
+.BotonDesencriptar:hover,
+.BotonEncriptar:hover {
+  margin: 0.3%;
+  width: 24.5%;
+  padding: 1.8%;
+}
+
+.btn {
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: center;
+  border: .15rem solid  #84786d;
+  border-radius: 1rem;
+  display: flex;
+  align-items: right;
+  padding: 2rem 5rem;
+  gap: 8px;
+  width: 25%;
+  margin: auto;
+  margin-top: 1rem;
+  background-color: #e2dfdb;
+  color: #84786d;
+  font-family: System-ui;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 19px;
+}
+
+
+.ocultar {
+  width: 100%;
+  display: none;
+}
+
+.encriptado{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 26%;
+  height: 90%;
+  left: 71%;
+  top: 5%;
+  background: #e3dfdb;
+  box-shadow: 0px 24px 32px -8px #463e35;
+  border-radius: 32px;
+}
+
+.MensajeInicial{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  gap: 16px;
+  position: absolute;
+  width: 100%;
+  top: 65%;
+  text-align: center;
+  position:absolute;
+    height: 48%;
+    
+    top: 50%;
+    border:none;
+
+}
+
+.MensajeInicial h2{
+  width: 120%;
+  font-family: System-ui;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 40%;
+  text-align: center;
+  color: #463e35;
+}
+
+.MensajeInicial p{
+  width: -120%;
+  font-family: System-ui;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #84766a;
+}
+
+.encriptado img{
+  position: absolute;
+  width: 80%;
+  height: 45%;
+  top: 15%;
+  opacity: 0.6;
+  filter: brightness(0) saturate(100%) invert(79%) sepia(4%) saturate(2339%) hue-rotate(297deg) brightness(101%) contrast(92%);
+}
+
+/* Ajustar tamaño */
+@media (max-width: 57.5em) {
+  .containerTexto {
+    display: flex;
+    flex-direction: row;
+  }
+  .containerEncriptador {
+    width: 100%;
+  }
+  .TxtPrincipal {
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    top: 5%;
+  }
+  .ReglasDeEncriptado {
+    width: 80%;
+    left: 10%;
+    top: 67%;
+  }
+  .ReglasDeEncriptado p {
+    font-size: 16px;
+  }
+  .Boton {
+    width: 80%;
+    left: 10%;
+    top: 70%;
+  }
+  .BotonEncriptar,
+  .BotonDesencriptar {
+    width: 48%;
+    border-radius: 16px;
+  }
+  .BotonEncriptar:hover,
+  .BotonDesencriptar:hover {
+    margin: 0.3%;
+    width: 47.5%;
+    padding: 1.8%;
+  }
+
+   
+
+  .encriptado {
+    width: 80%;
+    height: 15%;
+    left: 10%;
+    top: 80%;
+  }
+  .MensajeInicial {
+    width: 100%;
+    top: 5%;
+  }
+  .encriptado img {
+    top: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
